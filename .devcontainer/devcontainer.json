@@ -1,6 +1,10 @@
 {
   "name": "CS 2420 C++ Dev Environment",
-  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+  "containerEnv": {
+    "CC": "gcc-13",
+    "CXX": "g++-13"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
