@@ -20,10 +20,13 @@ int main()
     all_passed = false;
 #endif
 
-#if __cplusplus >= 201703L
-    std::cout << "Standard:  C++17     OK\n";
+#if __cplusplus >= 202002L
+    std::cout << "Standard:  C++20     OK\n";
+#elif __cplusplus >= 201703L
+    std::cout << "Standard:  C++17     FAIL (need C++20)\n";
+    all_passed = false;
 #else
-    std::cout << "Standard:  < C++17   FAIL\n";
+    std::cout << "Standard:  < C++17   FAIL (need C++20)\n";
     all_passed = false;
 #endif
 
